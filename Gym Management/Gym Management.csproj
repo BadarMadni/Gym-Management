@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96AFF64B-1A0B-4120-B094-B2DAC3D4D2F6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gym_Management</RootNamespace>
+    <AssemblyName>Gym Management</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbGymManagemntDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbGymManagemntDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttendence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAttendence.Designer.cs">
+      <DependentUpon>frmAttendence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDefaulters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDefaulters.Designer.cs">
+      <DependentUpon>frmDefaulters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFeePaid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFeePaid.Designer.cs">
+      <DependentUpon>frmFeePaid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistration.Designer.cs">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchRecords.Designer.cs">
+      <DependentUpon>frmSearchRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAttendence.resx">
+      <DependentUpon>frmAttendence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDefaulters.resx">
+      <DependentUpon>frmDefaulters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFeePaid.resx">
+      <DependentUpon>frmFeePaid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistration.resx">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchRecords.resx">
+      <DependentUpon>frmSearchRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DbGymManagemntDataSet.xsc">
+      <DependentUpon>DbGymManagemntDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DbGymManagemntDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbGymManagemntDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbGymManagemntDataSet.xss">
+      <DependentUpon>DbGymManagemntDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Admission.jpg" />
+    <Content Include="Resources\admission2.png" />
+    <Content Include="Resources\attendencee.png" />
+    <None Include="Resources\World Gym Logo.png" />
+    <None Include="Resources\welcome2.jpg" />
+    <None Include="Resources\welcome1.jpg" />
+    <None Include="Resources\cards-membership.png" />
+    <None Include="Resources\dmynkvxdgqbiunzacaig.png" />
+    <None Include="Resources\galleries-related-gym-png--gym-icon-vector--33.png" />
+    <None Include="Resources\footer_img-left.png" />
+    <None Include="Resources\galleries-related-gym-png--gym-icon-vector--331.png" />
+    <None Include="Resources\galleries-related-gym-png--gym-icon-vector--332.png" />
+    <Content Include="Resources\login.PNG" />
+    <None Include="Resources\login2.PNG" />
+    <None Include="Resources\login1.PNG" />
+    <Content Include="Resources\records.png" />
+    <Content Include="Resources\research_star.png" />
+    <Content Include="Resources\thSJEN27QC.jpg" />
+    <None Include="Resources\thSJEN27QC1.jpg" />
+    <Content Include="Resources\user.png" />
+    <None Include="Resources\weight.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\weight1.png" />
+    <Content Include="Resources\welcome.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
